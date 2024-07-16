@@ -191,7 +191,27 @@ body, html, main {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
+
+    .newsletter {
+        margin: 0 auto;
+
+        &-image {
+            max-width: 55%;
+            height: 40%;
+            margin: 0 auto;
+            border-radius: 16px;
+        }
+
+        &-text {
+            max-width: 50%;
+            margin: 0 auto;
+            padding-top: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
     #mobile-img {
         display: none;
     }
@@ -207,23 +227,18 @@ body, html, main {
 
     .newsletter {
         background-color: white;
-        width: 50%;
         flex-direction: row-reverse;
         height: unset;
         min-height: unset!important;
         margin: auto auto;
         justify-content: center;
         border-radius: 2.25em;
-        gap: 2.5em;
+        padding: 10px;
 
         &-image {
             width: 35%;
-            height: 100%;
-            margin: auto 0;
-        }
-
-        &-header {
-            font-size: 3.5em;
+            padding: 10px 0 10px;
+            margin: auto auto;
         }
 
         &-form {
@@ -248,7 +263,7 @@ body, html, main {
     }
 
     ._active {
-        width: 25%;
+        width: 35%;
     }
 
     .confirmation {

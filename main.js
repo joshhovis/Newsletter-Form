@@ -83,4 +83,18 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     form.addEventListener("submit", handleSubmit);
+
+    function handleResize() {
+        if (window.innerWidth >= 1200) {
+            mobileImg.style.display = 'none';
+            desktopImg.style.display = 'block';
+        } else {
+            mobileImg.style.display = 'block';
+            desktopImg.style.display = 'none';
+        }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
 })
