@@ -248,7 +248,7 @@ body, html, main {
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
     #mobile-img {
         display: none;
     }
@@ -265,7 +265,8 @@ body, html, main {
     .newsletter {
         background-color: white;
         flex-direction: row-reverse;
-        height: 80%;
+        height: 640px;
+        width: 928px;
         min-height: unset!important;
         margin: auto auto;
         justify-content: center;
@@ -273,15 +274,14 @@ body, html, main {
         padding: 10px;
 
         &-image {
-            width: 35%;
             padding: 10px 0 10px;
             margin: auto auto;
-            height: auto;
+            height: 600px;
         }
 
         &-text {
             justify-content: center;
-            height: auto;
+            height: 446px;
         }
 
         &-form {
@@ -331,24 +331,6 @@ body, html, main {
             &:hover, &:focus {
                 cursor: pointer;
             }
-        }
-    }
-}
-
-@media only screen and (min-width: 1500px) {
-    .newsletter {
-        height: 80%;
-
-        &-image {
-            width: 30%;
-        }
-
-        &-header {
-            font-size: 56px;
-        }
-
-        &-text {
-            height: 100%;
         }
     }
 }

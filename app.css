@@ -207,7 +207,7 @@ body, html, main {
     margin: auto auto;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   #mobile-img {
     display: none;
   }
@@ -221,7 +221,8 @@ body, html, main {
   .newsletter {
     background-color: white;
     flex-direction: row-reverse;
-    height: 80%;
+    height: 640px;
+    width: 928px;
     min-height: unset !important;
     margin: auto auto;
     justify-content: center;
@@ -229,14 +230,13 @@ body, html, main {
     padding: 10px;
   }
   .newsletter-image {
-    width: 35%;
     padding: 10px 0 10px;
     margin: auto auto;
-    height: auto;
+    height: 600px;
   }
   .newsletter-text {
     justify-content: center;
-    height: auto;
+    height: 446px;
   }
   .newsletter-form-input:hover, .newsletter-form-input:focus {
     cursor: pointer;
@@ -270,19 +270,5 @@ body, html, main {
   }
   .confirmation-button:hover, .confirmation-button:focus {
     cursor: pointer;
-  }
-}
-@media only screen and (min-width: 1500px) {
-  .newsletter {
-    height: 80%;
-  }
-  .newsletter-image {
-    width: 30%;
-  }
-  .newsletter-header {
-    font-size: 56px;
-  }
-  .newsletter-text {
-    height: 100%;
   }
 }/*# sourceMappingURL=app.css.map */
