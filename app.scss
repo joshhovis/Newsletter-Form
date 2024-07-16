@@ -218,11 +218,11 @@ body, html, main {
     }
 
     #mobile-img {
-        display: none;
+        display: none!important;
     }
 
     #desktop-img {
-        display: block;
+        display: block!important;
     }
 
     .newsletter {
@@ -236,8 +236,8 @@ body, html, main {
         border-radius: 32px;
 
         &-image {
-            width: 40%;
-            height: auto;
+            height: 470px;
+            padding: 20px;
             margin: auto auto;
         }
 
