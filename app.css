@@ -8,7 +8,7 @@
 }
 
 body, html, main {
-  min-height: 100% !important;
+  min-height: 100%;
   height: 100%;
 }
 
@@ -58,8 +58,8 @@ body, html, main {
 }
 .newsletter-list-item::before {
   vertical-align: top;
-  width: 1.3125em !important;
-  height: 1.3125em !important;
+  width: 1.3125em;
+  height: 1.3125em;
   height: 100%;
   margin-right: 0.5em;
   content: url(./assets/images/icon-list.svg);
@@ -120,7 +120,7 @@ body, html, main {
   top: 0;
   height: 100%;
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 20px;
   justify-content: space-between;
@@ -182,17 +182,17 @@ body, html, main {
     display: flex;
   }
   #mobile-img {
-    display: none !important;
+    display: none;
   }
   #desktop-img {
-    display: block !important;
+    display: block;
   }
   .newsletter {
     flex-direction: row-reverse;
     background-color: white;
     width: 80%;
     height: 80%;
-    min-height: unset !important;
+    min-height: unset;
     margin: auto auto;
     justify-content: center;
     border-radius: 32px;
@@ -223,7 +223,7 @@ body, html, main {
     flex-direction: row-reverse;
     height: 640px;
     width: 928px;
-    min-height: unset !important;
+    min-height: unset;
     margin: auto auto;
     justify-content: center;
     border-radius: 2.25em;
@@ -253,8 +253,8 @@ body, html, main {
     width: 35%;
   }
   .confirmation {
-    width: 100%;
-    height: auto;
+    width: 504px;
+    height: 520px;
     justify-content: center;
     position: unset;
     border-radius: 2.25em;

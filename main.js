@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileImg = document.getElementById("mobile-img");
     const desktopImg = document.getElementById("desktop-img");
     const newsletterText = document.getElementById("newsletter-text");
+    const newsletterImage = document.querySelectorAll(".newsletter-image");
 
     const dismissButton = document.querySelector(".confirmation-button");
     const confirmationPage = document.querySelector(".confirmation");
@@ -17,10 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkNavy = "#242742";
 
     function toggleSuccess()  {
-        if (window.innerWidth >= 1200) {
+        if (window.innerWidth >= 1024) {
             desktopImg.style.display = 'none';
             newsletterText.style.display = 'none';
             newsletter.classList.add('_active');
+        } else {
+            mobileImg.style.display = 'none';
         }
 
         if (formSubmitted === false) {
@@ -34,12 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function toggleDismiss() {
-        if (window.innerWidth >= 1200) {
+        if (window.innerWidth >= 1024) {
             desktopImg.style.display = 'block';
             newsletterText.style.display = 'flex';
             newsletter.classList.remove('_active');
         } else {
-            newsletterText.style.display = 'flex'
+            mobileImg.style.display = 'block';
+            newsletterText.style.display = 'flex';
         }
 
         if (formSubmitted === true) {
@@ -87,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", handleSubmit);
 
     function handleResize() {
-        if (window.innerWidth >= 1200) {
+        if (window.innerWidth >= 1024) {
             mobileImg.style.display = 'none';
             desktopImg.style.display = 'block';
         } else {
