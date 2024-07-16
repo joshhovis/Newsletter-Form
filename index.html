@@ -13,9 +13,65 @@
         <script defer src="./main.js"></script>
     </head>
     <body>
-        <img
-            src="./assets/images/illustration-sign-up-mobile.svg"
-            alt="illustration of a computer screen"
-        />
+        <main class="newsletter">
+            <img
+                class="newsletter-image"
+                src="./assets/images/illustration-sign-up-mobile.svg"
+                alt="illustration of a computer screen"
+            />
+
+            <div class="newsletter-text">
+                <h1 class="newsletter-header">Stay updated!</h1>
+
+                <p class="newsletter-subheader">
+                    Join 60,000+ product managers receiving monthly updates on:
+                </p>
+
+                <ul class="newsletter-list">
+                    <li class="newsletter-list-item">
+                        Product discovery and building what matters
+                    </li>
+                    <li class="newsletter-list-item">
+                        Measuring to ensure updates are a success
+                    </li>
+                    <li class="newsletter-list-item">And much more!</li>
+                </ul>
+
+                <form class="newsletter-form" action="">
+                    <label class="newsletter-form-label" for="email"
+                        >Email address</label
+                    >
+                    <input
+                        class="newsletter-form-input"
+                        type="text"
+                        name="email"
+                        placeholder="email@company.com"
+                    />
+
+                    <button class="newsletter-form-button">
+                        Subscribe to monthly newsletter
+                    </button>
+                </form>
+            </div>
+
+            <div class="confirmation" style="display: none">
+                <div class="confirmation-text">
+                    <img
+                        class="confirmation-icon"
+                        src="./assets/images/icon-success.svg"
+                        alt="checkmark icon"
+                    />
+                    <h1 class="confirmation-header">Thanks for Subscribing!</h1>
+                    <p class="confirmation-message">
+                        A confirmation email has been sent to
+                        <span class="confirmation-message-email"
+                            >ash@loremcompany.com</span
+                        >. Please open it and click the button inside to confirm
+                        your subscription.
+                    </p>
+                </div>
+                <button class="confirmation-button">Dismiss message</button>
+            </div>
+        </main>
     </body>
 </html>
