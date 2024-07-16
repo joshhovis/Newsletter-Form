@@ -3,7 +3,7 @@
 $grey-25: rgba(25, 24, 43, 0.25);
 $pale-navy: #36384D;
 $dark-navy: #242742;
-$vermellion: #FF6155;
+$vermellion: rgb(255, 97, 85);
 $gradientBg: rgb(255,106,58);
 $gradient: linear-gradient(22deg, rgba(255,106,58,1) 0%, rgba(255,82,123,1) 100%);
 
@@ -71,6 +71,11 @@ body, html, main {
         }
     }
 
+    &-labels {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &-form {
         display: flex;
         flex-direction: column;
@@ -79,6 +84,12 @@ body, html, main {
         &-label {
             font-size: 0.8125em;
             font-weight: 700;
+        }
+
+        &-error {
+            color: $vermellion;
+            font-weight: 700;
+            font-size: 0.8125em;
         }
 
         &-input {
@@ -92,6 +103,10 @@ body, html, main {
 
             &:focus {
                 border: 1px solid $dark-navy;
+            }
+
+            &:invalid {
+                border: 1px solid $vermellion;
             }
         }
 

@@ -10,6 +10,7 @@
             href="./assets/images/favicon-32x32.png"
             type="image/x-icon"
         />
+        <script src="https://cdn.jsdelivr.net/npm/validatorjs@3.22.1/dist/validator.min.js"></script>
         <script defer src="./main.js"></script>
     </head>
     <body>
@@ -37,18 +38,33 @@
                     <li class="newsletter-list-item">And much more!</li>
                 </ul>
 
-                <form class="newsletter-form" action="">
-                    <label class="newsletter-form-label" for="email"
-                        >Email address</label
-                    >
+                <form
+                    novalidate
+                    id="newsletter-form"
+                    class="newsletter-form"
+                    action=""
+                >
+                    <div class="newsletter-labels">
+                        <label class="newsletter-form-label" for="email"
+                            >Email address</label
+                        >
+                        <label
+                            class="newsletter-form-error"
+                            id="error-message"
+                            for="error"
+                            style="display: none"
+                            >Valid email required</label
+                        >
+                    </div>
                     <input
                         class="newsletter-form-input"
-                        type="text"
+                        type="email"
                         name="email"
+                        id="email"
                         placeholder="email@company.com"
                     />
 
-                    <button class="newsletter-form-button">
+                    <button type="submit" class="newsletter-form-button">
                         Subscribe to monthly newsletter
                     </button>
                 </form>

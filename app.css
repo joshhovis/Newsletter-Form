@@ -56,6 +56,10 @@ body, html, main {
   margin-right: 0.5em;
   content: url(./assets/images/icon-list.svg);
 }
+.newsletter-labels {
+  display: flex;
+  justify-content: space-between;
+}
 .newsletter-form {
   display: flex;
   flex-direction: column;
@@ -64,6 +68,11 @@ body, html, main {
 .newsletter-form-label {
   font-size: 0.8125em;
   font-weight: 700;
+}
+.newsletter-form-error {
+  color: rgb(255, 97, 85);
+  font-weight: 700;
+  font-size: 0.8125em;
 }
 .newsletter-form-input {
   outline: none;
@@ -76,6 +85,9 @@ body, html, main {
 }
 .newsletter-form-input:focus {
   border: 1px solid #242742;
+}
+.newsletter-form-input:invalid {
+  border: 1px solid rgb(255, 97, 85);
 }
 .newsletter-form-button {
   font-size: 1em;
