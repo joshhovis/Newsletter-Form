@@ -211,6 +211,43 @@ body, html, main {
     }
 }
 
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: $dark-navy;
+        display: flex;
+    }
+
+    #mobile-img {
+        display: none!important;
+    }
+
+    #desktop-img {
+        display: block!important;
+    }
+
+    .newsletter {
+        flex-direction: row-reverse;
+        background-color: white;
+        width: 80%;
+        height: 80%;
+        min-height: unset!important;
+        margin: auto auto;
+        justify-content: center;
+        border-radius: 32px;
+
+        &-image {
+            width: 40%;
+            height: auto;
+            margin: auto auto;
+        }
+
+        &-text {
+            justify-content: center;
+            margin: auto auto;
+        }
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     #mobile-img {
         display: none;
@@ -228,7 +265,7 @@ body, html, main {
     .newsletter {
         background-color: white;
         flex-direction: row-reverse;
-        height: unset;
+        height: 55%;
         min-height: unset!important;
         margin: auto auto;
         justify-content: center;
@@ -239,10 +276,12 @@ body, html, main {
             width: 35%;
             padding: 10px 0 10px;
             margin: auto auto;
+            height: auto;
         }
 
         &-text {
             justify-content: center;
+            height: auto;
         }
 
         &-form {
@@ -296,10 +335,20 @@ body, html, main {
     }
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1500px) {
     .newsletter {
+        height: 80%;
+
         &-image {
-            width: 45%;
+            width: 30%;
+        }
+
+        &-header {
+            font-size: 56px;
+        }
+
+        &-text {
+            height: 100%;
         }
     }
 }
