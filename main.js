@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkNavy = "#242742";
 
     function toggleSuccess()  {
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 1200) {
             desktopImg.style.display = 'none';
             newsletterText.style.display = 'none';
             newsletter.classList.add('_active');
@@ -25,19 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (formSubmitted === false) {
             confirmationPage.style.display = 'flex';
+            newsletterText.style.display = 'none'
             formSubmitted = true;
         } else {
             confirmationPage.style.display = 'none';
             formSubmitted = false;
-
         }
     }
 
     function toggleDismiss() {
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 1200) {
             desktopImg.style.display = 'block';
             newsletterText.style.display = 'flex';
             newsletter.classList.remove('_active');
+        } else {
+            newsletterText.style.display = 'flex'
         }
 
         if (formSubmitted === true) {

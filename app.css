@@ -118,7 +118,7 @@ body, html, main {
   z-index: 99;
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -202,6 +202,9 @@ body, html, main {
     padding: 10px 0 10px;
     margin: auto auto;
   }
+  .newsletter-text {
+    justify-content: center;
+  }
   .newsletter-form-input:hover, .newsletter-form-input:focus {
     cursor: pointer;
     border: 1px solid #242742;
@@ -234,5 +237,10 @@ body, html, main {
   }
   .confirmation-button:hover, .confirmation-button:focus {
     cursor: pointer;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .newsletter-image {
+    width: 45%;
   }
 }/*# sourceMappingURL=app.css.map */
