@@ -12,6 +12,14 @@ body, html, main {
   height: 100%;
 }
 
+#mobile-img {
+  display: block;
+}
+
+#desktop-img {
+  display: none;
+}
+
 .newsletter {
   line-height: 1.5;
   height: 100vh;
@@ -100,6 +108,10 @@ body, html, main {
   background-color: #242742;
   margin-top: auto;
 }
+.newsletter-form-button:active {
+  background: rgb(255, 106, 58);
+  background: linear-gradient(22deg, rgb(255, 106, 58) 0%, rgb(255, 82, 123) 100%);
+}
 
 .confirmation {
   background: white;
@@ -142,4 +154,73 @@ body, html, main {
   color: white;
   font-weight: 700;
   background-color: #242742;
+}
+.confirmation-button:active {
+  background: rgb(255, 106, 58);
+  background: linear-gradient(22deg, rgb(255, 106, 58) 0%, rgb(255, 82, 123) 100%);
+}
+
+@media only screen and (min-width: 768px) {
+  #mobile-img {
+    display: none;
+  }
+  #desktop-img {
+    display: block;
+  }
+  body {
+    background-color: #242742;
+    display: flex;
+  }
+  .newsletter {
+    background-color: white;
+    width: 50%;
+    flex-direction: row-reverse;
+    height: unset;
+    min-height: unset !important;
+    margin: auto auto;
+    justify-content: center;
+    border-radius: 2.25em;
+    gap: 2.5em;
+  }
+  .newsletter-image {
+    width: 35%;
+    height: 100%;
+    margin: auto 0;
+  }
+  .newsletter-header {
+    font-size: 3.5em;
+  }
+  .newsletter-form-input:hover, .newsletter-form-input:focus {
+    cursor: pointer;
+    border: 1px solid #242742;
+  }
+  .newsletter-form-button:hover {
+    background: rgb(255, 106, 58);
+    background: linear-gradient(22deg, rgb(255, 106, 58) 0%, rgb(255, 82, 123) 100%);
+  }
+  .newsletter-form-button:hover, .newsletter-form-button:focus {
+    cursor: pointer;
+  }
+  ._active {
+    width: 25%;
+  }
+  .confirmation {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    position: unset;
+    border-radius: 2.25em;
+    padding: 2.5em;
+    gap: 1.25em;
+  }
+  .confirmation-text {
+    margin: 0;
+  }
+  .confirmation-button:hover {
+    background: rgb(255, 106, 58);
+    background: linear-gradient(22deg, rgb(255, 106, 58) 0%, rgb(255, 82, 123) 100%);
+  }
+  .confirmation-button:hover, .confirmation-button:focus {
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=app.css.map */

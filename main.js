@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailInput = document.getElementById("email");
     const errorMessage = document.getElementById("error-message");
 
-    const submitButton = document.querySelector(".newsletter-form-button");
+    const newsletter = document.querySelector(".newsletter");
+    const mobileImg = document.getElementById("mobile-img");
+    const desktopImg = document.getElementById("desktop-img");
+    const newsletterText = document.getElementById("newsletter-text");
+
     const dismissButton = document.querySelector(".confirmation-button");
     const confirmationPage = document.querySelector(".confirmation");
 
@@ -13,16 +17,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkNavy = "#242742";
 
     function toggleSuccess()  {
+        if (window.innerWidth >= 768) {
+            desktopImg.style.display = 'none';
+            newsletterText.style.display = 'none';
+            newsletter.classList.add('_active');
+        }
+
         if (formSubmitted === false) {
             confirmationPage.style.display = 'flex';
             formSubmitted = true;
         } else {
             confirmationPage.style.display = 'none';
             formSubmitted = false;
+
         }
     }
 
     function toggleDismiss() {
+        if (window.innerWidth >= 768) {
+            desktopImg.style.display = 'block';
+            newsletterText.style.display = 'flex';
+            newsletter.classList.remove('_active');
+        }
+
         if (formSubmitted === true) {
             confirmationPage.style.display = 'none';
             formSubmitted = false;
